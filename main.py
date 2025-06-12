@@ -58,3 +58,10 @@ plot_portfolio_growth(portfolio_returns)
 
 # 📈 Plot Efficient Frontier
 plot_efficient_frontier(expected_returns.values, cov_matrix.values)
+
+# Save adjusted close prices to data/close_prices_sample.csv
+adj_close.to_csv("data/close_prices_sample.csv")
+print("Adjusted close prices saved.")
+# Save optimized weights to data/portfolio.csv
+result.to_csv("data/portfolio.csv", index=False)
+print("Optimized portfolio weights saved.")
