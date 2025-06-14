@@ -4,7 +4,15 @@ import cvxpy as cp
 import numpy as np
 import matplotlib.pyplot as plt
 
-def fetch_data(tickers, start="2020-01-01", end="2024-12-31"):
+def fetch_data(tickers, start=None, end=None):
+    import datetime
+
+    # Use default dates if user does not provide them
+    if not start:
+        start = "2020-01-01"
+    if not end:
+        end = datetime.datetime.today().strftime("%Y-%m-%d")
+
     data = yf.download(tickers, start=start, end=end, group_by='ticker', auto_adjust=True)
 
     # Handle both single and multi-level column format

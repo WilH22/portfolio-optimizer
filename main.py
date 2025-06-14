@@ -12,11 +12,13 @@ from modules.visualizer import plot_portfolio_weights
 
 #Step 1: Input tickers
 tickers = input("Enter tickers (comma separated): ").split(",")
+start_date = input("Enter start date (YYYY-MM-DD): ")
+end_date = input("Enter end date (YYYY-MM-DD): ")
 tickers = [t.strip().upper() for t in tickers]
 
 # Step 2: Fetch data
 
-adj_close, returns = fetch_data(tickers)
+adj_close, returns = fetch_data(tickers, start=start_date, end=end_date)
 
 # Step 3: Compute metrics
 expected_returns = returns.mean() * 252
