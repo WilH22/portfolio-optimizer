@@ -22,6 +22,9 @@ Whether you're an aspiring quant, finance student, or curious investor, this too
 
 ![image](https://github.com/user-attachments/assets/efb233ae-af90-40a8-b049-4b9164504f8d)
 
+✅ The default input for start date : 2020-01-01
+![image](https://github.com/user-attachments/assets/940a5658-8a92-433e-a88b-d51a665fe3df)
+
 
 ## 📈 Example Output
 - 💼 Optimal Portfolio Allocation:
